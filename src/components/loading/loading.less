@@ -1,0 +1,51 @@
+@import '../../common/css/csslib.less';
+.loading{
+	position:fixed;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	z-index:99;
+	.loading-content,
+	.loading-mask{
+		position: absolute;
+		left:50%;
+		top:50%;
+		border-radius: 5px;
+		.rem(width, 240rem);
+		.rem(height, 240rem);
+		.rem(margin-left, -120rem);
+		.rem(margin-top, -120rem);
+		z-index:100;
+	}
+	.loading-bg{
+		position: absolute;
+		left:0;
+		top:0;
+		width: 100%;
+		height: 100%;
+		background-color: #000;
+		opacity: .6;
+	}
+	.loading-icon{
+		position: relative;
+		margin-top: 1.5rem;
+		left: 50%;
+		margin-left: -0.92rem;
+		.rem(width, 86rem);
+		.rem(height, 68rem);
+		background: url(./img/loading.png) 0 0 no-repeat;
+		background-size: 100% 100%;
+	}
+	.loading-text{
+		position: relative;
+		margin-top:0.8rem;
+		text-align: center;
+		font-size: 12px;
+		color:#aaa;
+	}
+	.loading-mask{
+		z-index:99;
+		background: #fff;
+	}
+}
