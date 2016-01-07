@@ -18,9 +18,19 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
+    "bifypack": "^1.1.2",
     "jstify": "^0.13.0",
     "lodash.template": "^3.6.2",
     "partialify": "^3.1.5",
-    "node-lessify": "dolymood/node-lessify"
+    "node-lessify": "dolymood/node-lessify",
+    "pre-commit": "*"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "scripts": {
+    "dev": "bifypack reload",
+    "lint": "bifypack eslint",
+    "build": "bifypack rev"
   }
 }
