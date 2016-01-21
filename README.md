@@ -9,7 +9,7 @@
 ```js
 {
   "name": "bifypack-sample",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "bifypack示例",
   "keywords": ["bifypack-sample", "bifypack sample", "bifypack demo"],
   "repository": {
@@ -27,7 +27,7 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "bifypack": "^1.1.2",
+    "bifypack": "^1.1.3",
     "jstify": "^0.13.0",
     "lodash.template": "^3.6.2",
     "partialify": "^3.1.5",
