@@ -1,6 +1,6 @@
 {
   "name": "bifypack-sample",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "bifypack示例",
   "keywords": ["bifypack-sample", "bifypack sample", "bifypack demo"],
   "repository": {
@@ -18,7 +18,7 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "bifypack": "^1.2.0",
+    "bifypack": "^1.2.1",
     "jstify": "^0.13.0",
     "lodash.template": "^3.6.2",
     "partialify": "^3.1.5",
