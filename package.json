@@ -2,7 +2,11 @@
   "name": "bifypack-sample",
   "version": "0.4.1",
   "description": "bifypack示例",
-  "keywords": ["bifypack-sample", "bifypack sample", "bifypack demo"],
+  "keywords": [
+    "bifypack-sample",
+    "bifypack sample",
+    "bifypack demo"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dolymood/bifypack-sample.git"
@@ -18,11 +22,15 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "bifypack": "^1.4.1",
+    "bifypack": "^2.0.0",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-less": "^3.1.0",
     "jstify": "^0.13.0",
+    "less-plugin-clean-css": "^1.5.1",
     "lodash.template": "^3.6.2",
-    "partialify": "^3.1.5",
     "node-lessify": "dolymood/node-lessify",
+    "partialify": "^3.1.5",
     "pre-commit": "*"
   },
   "pre-commit": [

@@ -1,5 +1,14 @@
 var path = require('path')
 
+var less = require('gulp-less')
+var LessPluginCleanCSS = require('less-plugin-clean-css')
+var htmlmin = require('gulp-htmlmin')
+var imagemin = require('gulp-imagemin')
+var cleanCSSPlugin = new LessPluginCleanCSS({
+	advanced: true,
+	compatibility: 'ie8'
+})
+
 var externals = {
 	jquery: '$'
 }
@@ -77,15 +86,40 @@ var config = {
 		}
 	},
 
-	html: ['**/*.html'], // html tasks
-	style: [
-		'common/css/g.css',
-		'app/**/*.css'
-	],
-	img: [
-		'components/**/*.{' + exts + '}',
-		'app/**/*.{' + exts + '}'
-	]
+	html: {
+		src: ['**/*.html'], // html tasks
+		plugins: [
+			function (styleConfig, config, utils) {
+				return htmlmin({
+					collapseWhitespace: true
+				})
+			}
+		]
+	},
+	style: {
+		src: [
+			'common/css/g.less',
+			'app/**/*.less'
+		],
+		plugins: [
+			function (styleConfig, config, utils) {
+				return less({
+					plugins: [cleanCSSPlugin]
+				})
+			}
+		]
+	},
+	img: {
+		src: [
+			'components/**/*.{' + exts + '}',
+			'app/**/*.{' + exts + '}'
+		],
+		plugins: [
+			function (imgConfig, config, utils) {
+				return imagemin()
+			}
+		]
+	}
 }
 
 module.exports = config
