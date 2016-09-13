@@ -27,6 +27,18 @@ var config = {
 		// }
 	},
 
+	browserSync: {
+		port: 4000,
+		open: true,
+		startPath: '/webroot/sample/',
+		server: {
+			baseDir: 'dev',
+			routes: {
+				'/webroot/sample/': 'dev'
+			}
+		}
+	},
+
 	script: {
 
 		eslint: ['app/**/*.js', 'common/**/*.js', 'components/**/*.js'],
